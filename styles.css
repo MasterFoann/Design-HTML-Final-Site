@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    border-bottom: solid 2px black;
+}
+
+mark {
+    background-color: red;
+    color: white;
+    border-bottom: solid 5px red;
+    border-left: solid 2px red;
+    border-right: solid 2px red;
+}
+
+.head {
+    padding: 20px;
+    text-align: left;
+    border-bottom: solid 5px red;
+    display: block;
+    font-size: 150%;
+}
+
+.head td {
+    transform: scale(1);
+    transition: transform .5s;
+}
+
+.head td:hover {
+    transform: scale(1.2);
+    transition: transform 1s;
+}
+
+#name {
+    font-size: auto;
+}
+
+.centertable {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.spacing {
+    width: 40px;
+}
+
+.content {
+    margin: 50px;
+    font-size: 150%;
+}
+
+.homeimage {
+    padding-left: 10px;
+    width: 30%;
+    transform: translateY(0px);
+    ;
+    transition: transform .5s;
+}
+
+
+.homeimage:hover {
+    transform: translateY(5px);
+    transition: transform .2s;
+}
+
+.image {
+    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    width: auto;
+    height: auto;
+    transform: translateY(0px);
+    ;
+    transition: transform .5s;
+}
+
+.image:hover {
+    transform: translateY(5px);
+    transition: transform .2s;
+}
+
+#theme {
+    padding-left: auto;
+    padding-right: auto;
+    width: 20px;
+    height: 20px;
+}
+
+.ref {
+    padding-left: 30px;
+}
+
+.infotable tr td {
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.infotable {
+    border-collapse: collapse;
+}
+
+.infoimage {
+    width: 40%;
+}
+
+#sock {
+    width: 200px;
+}
+
+#headphones {
+    border: 5px solid red;
+    border-radius: 40px;
+    border-style: dashed;
+}

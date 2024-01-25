@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&family=Space+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Silly's 3D</title>
+</head>
+<header class="head">
+    <table>
+        <tr>
+            <td><img src="night-mode.png" id="theme"></td>
+            <td class="spacing"></td>
+            <td><a href="modelling.html">
+                    <h3 id="navbar">MODELLING</h3>
+                </a></td>
+            <td class="spacing"></td>
+            <td><a href="shading.html">
+                    <h3 id="navbar">SHADING</h3>
+                </a></td>
+            <td class="spacing"></td>
+            <td><a href="index.html">
+                    <h1 id="name">Silly's 3D</h1>
+                </a></td>
+            <td class="spacing"></td>
+            <td><a href="lighting.html">
+                    <h3 id="navbar">LIGHTING</h3>
+                </a></td>
+            <td class="spacing"></td>
+            <td><a href="resources.html">
+                    <h3 id="navbar">RESOURCES</h3>
+                </a></td>
+            <td class="spacing"></td>
+            <td><img src="night-mode.png" id="theme"></td>
+        </tr>
+    </table>
+</header>
+
+
+<body>
+    <div class="content">
+        <table>
+            <tr>
+                <td>
+                    <h1>Shaders</h1>
+                    <br>
+                    <ul>
+                        <li><a href="#intro">Intro</a></li>
+                        <li><a href="#nodes">Nodes & Data Streams</a></li>
+                    </ul>
+                </td>
+                <td class="spacing"></td>
+                <td class="spacing"></td>
+                <td>
+                        <video width="200" loop autoplay id="headphones">
+                            <source src="0001-0100.mp4" type="video/mp4">
+                            Your browser does not support HTML video.
+                        </video>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <h3 id="intro">Intro</h3>
+        <p>Welcome to Silly's 3D shader node section! Here, we'll discuss texturing your model to react to lights, using procedural nodes.</p>
+        <br>
+        <h3 id="nodes">Nodes & Data Streams</h3>
+        <p>Nodes are how we construct materials, on the left is input</p>
+        <br>
+        <table class="infotable">
+            <tr>
+                <td>Vertices</td>
+                <td>A singular point in space, part of a mesh.</td>
+            </tr>
+            <tr>
+                <td>Edges</td>
+                <td>A line connecting 2 vertices, part of a mesh.</td>
+            </tr>
+            <tr>
+                <td>Faces</td>
+                <td>A flat surface connecting 3 or more vertices, with edges between them.</td>
+            </tr>
+            <tr>
+                <td>Topology</td>
+                <td>The organization of geometry on your object.</td>
+            </tr>
+        <br>
+    </div>
+</body>
+
+
+</html>

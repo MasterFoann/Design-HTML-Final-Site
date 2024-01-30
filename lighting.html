@@ -39,4 +39,62 @@
     </table>
 </header>
 
+<body>
+    <div class="content">
+        <table>
+            <tr>
+                <td>
+                    <h1>Lighting</h1>
+                    <br>
+                    <ul>
+                        <li><a href="#intro">Intro</a></li>
+                        <li><a href="#objects">Object Types</a></li>
+                        <li><a href="#light">Light Types</a></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <h3 id="intro">Intro</h3>
+        <p>Welcome to Silly's 3D lighting section! Here, we'll discuss adding lights to your scene to make your render pop! We'll discuss your options for light objects, and methods of light.</p>
+        <br>
+        <h3 id="objects">Object Types</h3>
+        <p>There are a few different light types in blender:</p>
+        <br>
+        <table class="infotable">
+            <tr>
+                <td>Point</td>
+                <td>Light that emits from a single point.</td>
+            </tr>
+            <tr>
+                <td>Area</td>
+                <td>An area that emits light, the shape can be modified in the properties panel.</td>
+            </tr>
+            <tr>
+                <td>Spot</td>
+                <td>A cone shaped light, works similar to a stage light's beam, can be modified to be less or more harsh.</td>
+            </tr>
+            <tr>
+                <td>Sun</td>
+                <td>Light emitted throughout your scene from one angle, used to simulate light from a sun.</td>
+            </tr>
+            <tr>
+                <td>HDRIs</td>
+                <td>Though not an object, an HDRI can be applied to your scene, downloaded from external websites, to create very realistic reflections and lighting, but requires additional lighting for proper polish.</td>
+            </tr>
+        </table>
+        <br>
+        <p>The first 4 act very similar and are easy to get the hang of using, but HDRIs are different, in that you need to download or capture/create a 360° equirectangular image to apply in the shaders panel in the World dropdown.</p>
+        <br>
+        <h3 id="light">Light Types</h3>
+        <p>There are different styles of lighting that should be combined for a full lighting setup. We've taken the following demo from <a href="blender.org">blender.org</a>, one of it's demo files.</p>
+        <ul>
+            <li>Environmental light: Strong soft light that contributes to the majority of the light in a scene, here it's coming in through the window.</li>
+            <li>Rim Lighting: Small highlights on the edges of objects, notice this on the metal backs of chairs in the scene.</li>
+        </ul>
+        <br>
+        <img src="classroom.jpg" alt="classroom" style="width: 800px;">
+    </div>
+</body>
+
 </html>

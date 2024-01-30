@@ -49,44 +49,95 @@
                     <br>
                     <ul>
                         <li><a href="#intro">Intro</a></li>
-                        <li><a href="#nodes">Nodes & Data Streams</a></li>
+                        <li><a href="#data">Data Streams</a></li>
+                        <li><a href="#nodes">Nodes</a></li>
                     </ul>
                 </td>
                 <td class="spacing"></td>
                 <td class="spacing"></td>
                 <td>
-                        <video width="200" loop autoplay id="headphones">
-                            <source src="0001-0100.mp4" type="video/mp4">
-                            Your browser does not support HTML video.
-                        </video>
+                    <img src="FM67.png" alt="textured gun" id="FM67">
                 </td>
             </tr>
         </table>
         <br>
         <h3 id="intro">Intro</h3>
-        <p>Welcome to Silly's 3D shader node section! Here, we'll discuss texturing your model to react to lights, using procedural nodes.</p>
+        <p>Welcome to Silly's 3D shader node section! Here, we'll discuss texturing your model to react to lights, using
+            procedural nodes.</p>
         <br>
-        <h3 id="nodes">Nodes & Data Streams</h3>
-        <p>Nodes are how we construct materials, on the left is input</p>
+        <h3 id="data">Data Streams</h3>
+        <p>Nodes are how we construct materials, node inputs are on the left, and outputs are on the left. Data streams
+            can be plugged from outputs into inputs, and data comes in different forms:</p>
         <br>
         <table class="infotable">
             <tr>
-                <td>Vertices</td>
-                <td>A singular point in space, part of a mesh.</td>
+                <td>Color</td>
+                <td>Yellow data stream containing color.</td>
             </tr>
             <tr>
-                <td>Edges</td>
-                <td>A line connecting 2 vertices, part of a mesh.</td>
+                <td>Float</td>
+                <td>Gray node containing a number supporting decimal places.</td>
             </tr>
             <tr>
-                <td>Faces</td>
-                <td>A flat surface connecting 3 or more vertices, with edges between them.</td>
+                <td>Vector</td>
+                <td>Purple data stream containing a 3 dimensional number, can contain rotation or location</td>
             </tr>
             <tr>
-                <td>Topology</td>
-                <td>The organization of geometry on your object.</td>
+                <td>Shader</td>
+                <td>Green data stream containing the full lighting information needed for rendering.</td>
             </tr>
+        </table>
         <br>
+        <h3 id="nodes">Nodes</h3>
+        <br>
+        <table class="infotable">
+            <tr>
+                <td>Principled BSDF Node</td>
+                <td><img src="principled.png" class="node" alt="principled bsdf node"></td>
+                <td>Base shader node, contains information for almost all materials</td>
+            </tr>
+            <tr>
+                <td>Texture Nodes</td>
+                <td><img src="noise.png" class="node" alt="noise node"></td>
+                <td>Orange nodes like the noise node generate textures, with technically limitless detail since they
+                    don't use pixels.</td>
+            </tr>
+            <tr>
+                <td>Mapping Nodes</td>
+                <td><img src="mapping.png" class="node" alt="mapping nodes"></td>
+                <td>A mapping setup can be created by hitting ctrl+T, and will drive the location of textures using UVs
+                    or generated location. A texture coordinate node outputs the location, and the mapping node can be
+                    used to move it.</td>
+            </tr>
+            <tr>
+                <td>Color Ramp & Math nodes</td>
+                <td><img src="colorramp.png" class="node" alt="color ramp node"></td>
+                <td>The color ramp node can be used to map data to a new "ramp", used to push colors to other ones or
+                    make adjustments to generated textures like waves or noise.
+                    Similarly, the math node can be used to apply operations to inputted data.</td>
+            </tr>
+            <tr>
+                <td>Mix Nodes</td>
+                <td><img src="mix.png" class="node" alt="mix nodes"></td>
+                <td>The mix and mix shader nodes will mix between colors, numbers, vectors and shaders, the first 3 in
+                    one node and the last in a separate node.
+                    These will smoothly mix between two values, for example, mixing the colors red and yellow with a
+                    factor of 0.5 would result in an orange.</td>
+            </tr>
+        </table>
+        <br>
+        <h3>Let's make a material!</h3>
+        <p>Now that have the tools, we're going to create a simple camo material.</p>
+        <br>
+        <p>First, we'll create a material on our object from the shading tab at the top of the screen.</p>
+        <img src="mat1.png" class="tutorial" alt="adding a material">
+        <p>This creates a Principled BSDF node and a node output automatically. We'll need a noise texture for our camo, and feel free to play with the values on the node to test them out!</p>
+        <img src="mat2.png" class="tutorial" alt="adding noise">
+        <p>Now we'll need some well-seperated colors. We'll use a Color Ramp for this, and insert it right after to noise texture. We'll set the mode from linear to constant, and add some colored stops to control our color.</p>
+        <img src="mat3.png" class="tutorial" alt="adding color ramp">
+        <p>The last thing we'll do is add some uneven roughness and metallic maps. Metallic controls how much light is reflected off of a surface, and roughness changed how clear the reflection is. We can just use another noise texture for this.</p>
+        <img src="mat4.png" class="tutorial" alt="PBR">
+        <p>This will bring a little more realism in, and our material is done! Try out different nodes, because there are waayy more than these few, and mess with different inputs and outputs.</p>
     </div>
 </body>
 
